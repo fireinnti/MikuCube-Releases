@@ -1,0 +1,6 @@
+# APKs are Release ASSETS, never repo contents. A 68 MB binary committed to git
+# stays in history forever and is downloaded by every clone. Upload it to the
+# GitHub Release instead.
+*.apk
+*.aab
+*.idsig
