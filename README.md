@@ -199,5 +199,11 @@ Independent, unofficial software. Not affiliated with, endorsed by, or supported
 by bilibili, Crypton Future Media, or the device manufacturer. "Hatsune Miku"
 and related characters are trademarks of their respective owners.
 
+**Free, but not open source.** This repository holds the releases, not the code.
+The app bundles the cube's own face animations so the picker works offline, and
+part of how it talks to the cube came from taking the official app apart —
+neither is mine to hand out. Bug reports and device-data dumps are very welcome
+in [issues](../../issues) all the same.
+
 Provided as-is, with no warranty. Use at your own risk — especially firmware
 flashing.
