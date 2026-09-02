@@ -44,11 +44,16 @@ settings are kept.
 ## Setting up your cube
 
 1. Turn the cube on and keep it near your phone.
-2. **Open the case** (flip the back open). The cube only advertises over
-   Bluetooth while it's open — if it's shut, scanning finds nothing.
+2. **Open the back of the cube.** It only advertises over Bluetooth while the
+   back is open — if it's shut, scanning finds nothing. This is by far the most
+   common reason a scan comes up empty, so the scan screen reminds you too.
 3. Open the app and tap **Scan**. Likely cubes are marked **LIKELY YOUR CUBE** —
    tap yours. (If it isn't listed, tap *Show all Bluetooth devices*.)
-4. Tap **Connect**.
+4. Confirm the Android pairing prompt. Picking your cube also adds it to your
+   phone's own Bluetooth devices, so the earbuds work as an audio device — no
+   need to pair it in system settings first. Everything in the app works without
+   this, so if it doesn't take, the connect screen offers **Add to Bluetooth**.
+5. Tap **Connect**.
 
 <p align="center">
   <img src="screenshots/01-find-your-cube.png" width="32%" alt="Scan — your cube is highlighted" />
@@ -57,7 +62,8 @@ settings are kept.
 
 Everything happens on-device — no internet, no account. The app remembers your
 cube, so next time it connects straight away. To pair a different one, use
-**Settings → Forget device**.
+**Settings → Forget device** (that leaves the cube in your phone's Bluetooth
+list; remove it there if you want it gone).
 
 ### Why does it ask for Location permission?
 
@@ -70,14 +76,20 @@ doesn't use, collect, or store your location.
 
 | | |
 |---|---|
-| **Face Studio** | Change the cube's face, or upload and crop your own image |
+| **Face Studio** | Change the cube's face, or upload and crop your own image — press and hold your custom image to remove it |
 | **Animation Selection** | Pick 1–5 animations for each time of day |
-| **Wake Alarm** | Alarms with repeat days and a scrolling message |
+| **Wake Alarm** | Alarms with repeat days and a scrolling message. **Use next alarm from Clock** fills in the time from your phone's own next alarm |
 | **Danmaku** | Custom scrolling messages and reminders |
 | **System Settings** | See your real firmware version, switch themes |
 
 Face images are built into the app, so browsing works offline. Internet is only
 needed to **switch themes**, which downloads a firmware image.
+
+**You don't have to save anything.** Alarms and danmaku write themselves to the
+cube as you change them. And when you open Alarms, Animation Selection or System
+Settings, the app reads that screen off the cube for you — a line at the top
+tells you whether you're looking at the cube's settings or your saved copy, with
+a **Refresh** if you've changed something from the Bilibili app since.
 
 <p align="center">
   <img src="screenshots/04-menu.png"         width="24%" alt="Menu" />
@@ -158,10 +170,15 @@ worth finding out the hard way.
 ## Troubleshooting
 
 **Cube doesn't appear when scanning**
-Open the case — the cube only advertises while it's open, and this is by far the
-most common reason a scan comes up empty. Also check it's powered on and nearby,
-that Bluetooth and Location are enabled, and try *Show all Bluetooth devices* in
-case it wasn't detected automatically.
+Try opening the back of the cube — it only advertises while the back is open,
+and this is by far the most common reason a scan comes up empty. Also check it's
+powered on and nearby, that Bluetooth and Location are enabled, and try *Show
+all Bluetooth devices* in case it wasn't detected automatically.
+
+**The cube isn't in my phone's Bluetooth list / the earbuds don't play audio**
+Picking your cube in the app pairs it with the phone as well, but Android can
+refuse or the prompt can get dismissed. Open the connect screen and tap **Add to
+Bluetooth**, or **Open Bluetooth settings** to do it by hand.
 
 **Connects, then nothing happens**
 Force-close the app and reopen it. If the cube was recently restarted, give it a
