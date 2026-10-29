@@ -65,6 +65,17 @@ cube, so next time it connects straight away. To pair a different one, use
 **Settings → Forget device** (that leaves the cube in your phone's Bluetooth
 list; remove it there if you want it gone).
 
+Saved connections can reconnect with the back closed. Initial setup still
+requires opening the back.
+
+### Setting the cube's clock
+
+Connect the **earbuds** in Android's Bluetooth settings to synchronize the cube
+with the phone. In the app, **System Settings → Cube clock → Open Bluetooth
+settings** opens the right page. If the clock is wrong, check your phone's date,
+time and timezone, then disconnect and reconnect the earbuds. Connecting only
+the app does not set the displayed clock.
+
 ### Why does it ask for Location permission?
 
 Android requires it for *any* app that scans for Bluetooth devices. The app
@@ -76,8 +87,8 @@ doesn't use, collect, or store your location.
 
 | | |
 |---|---|
-| **Face Studio** | Change the cube's face, or upload and crop your own image — press and hold your custom image to remove it |
-| **Animation Selection** | Pick 1–5 animations for each time of day |
+| **Face Studio** | Preview a face and choose 1–1000 plays, or 0 for unlimited; upload and crop your own image |
+| **Animation Selection** | Pick 1–5 animations for each time of day; repair missing schedule timing while keeping your selections |
 | **Wake Alarm** | Alarms with repeat days and a scrolling message. **Use next alarm from Clock** fills in the time from your phone's own next alarm |
 | **Danmaku** | Custom scrolling messages and reminders |
 | **System Settings** | See your real firmware version, switch themes |
@@ -85,11 +96,14 @@ doesn't use, collect, or store your location.
 Face images are built into the app, so browsing works offline. Internet is only
 needed to **switch themes**, which downloads a firmware image.
 
-**You don't have to save anything.** Alarms and danmaku write themselves to the
-cube as you change them. And when you open Alarms, Animation Selection or System
-Settings, the app reads that screen off the cube for you — a line at the top
-tells you whether you're looking at the cube's settings or your saved copy, with
-a **Refresh** if you've changed something from the Bilibili app since.
+**Alarms and danmaku save as you edit.** In Face Studio, choose a count and tap
+**Confirm** to apply it. For scheduled animations, choose a slot, select its
+animations and tap **Save**.
+
+Opening Alarms, Animation Selection or System Settings reads that screen from
+the cube. A line at the top tells you whether you're looking at the cube's
+settings or your saved copy, with **Refresh** if you've changed something in
+the Bilibili app since.
 
 <p align="center">
   <img src="screenshots/04-menu.png"         width="24%" alt="Menu" />
@@ -102,18 +116,17 @@ a **Refresh** if you've changed something from the Bilibili app since.
 
 ## Known quirks
 
-These are quirks of the cube's own firmware, not bugs in the app:
+Current limitations and device behaviours:
 
 - **Alarms.** The cube reads alarm times as China time, so alarms would normally
   fire hours late. The app corrects for this automatically, so alarms ring when
   you set them. Side effect: if you look at those alarms in the Bilibili app,
   the times will look shifted. That's expected.
-- **Animation Selection is view-only right now.** The cube appears to always play
-  the first slot (Dawn) instead of picking by the current time, and we don't yet
-  know why. Until we do, saving is disabled on that screen so a write can't
-  corrupt your settings — you can still view what's assigned. It will be enabled
-  again once the behaviour is understood.
-  **[You can help work this out ↓](#-can-you-help-share-your-cubes-data)**
+- **Older animation schedules may need repair.** If the app detects missing
+  timing, choose **Restore default times**. This keeps animation selections and
+  resets custom time ranges. Healthy schedules can be edited normally. The
+  selected slot was verified to change with local time after waking the cube;
+  it did not visibly switch while idle during the test.
 - **"Scroll lyrics while music plays"** only works with certain music apps.
   Spotify and YouTube Music don't drive it.
 
@@ -121,37 +134,19 @@ These are quirks of the cube's own firmware, not bugs in the app:
 
 ## 🙏 Can you help? Share your cube's data
 
-**Especially if your cube is new, or you've only ever used the Bilibili app.**
+Thank you to everyone who shared device dumps. Comparing those files revealed
+the missing animation timing fields, and v1.0.2 restores scheduling and editing.
 
-We're stuck on one thing: the cube seems to always play the *first* animation
-slot (Dawn) instead of picking by the time of day. To work out whether that's
-how the device just behaves — or something this app broke — we need to see a
-cube whose settings **this app has never written to**.
+If your cube still behaves differently, a dump can help investigate:
 
-The developer's own cube has been written to hundreds of times while reverse
-engineering the protocol, so its original settings are long gone. Yours might
-still be intact.
+1. Connect your cube.
+2. Open **Settings → Copy device data**.
+3. Review the text, then paste it into a [new issue](../../issues/new) with your
+   firmware version, what you expected, and what happened.
 
-<p align="center">
-  <img src="screenshots/10-share-data.png" width="32%" alt="Settings — Copy device data" />
-</p>
-
-**How:**
-
-1. Connect your cube
-2. **Settings → Copy device data**
-3. Paste it into a [new issue](../../issues/new)
-
-It's **read-only** — it reads six small config files and copies them to your
-clipboard. It writes nothing, so it can't disturb whatever state your cube is in.
-
-**What's in it:** your animation schedule, alarms, danmaku phrases, theme list,
-current face, and the device's face catalogue — plus your timezone offset, which
-matters because the cube's clock handling is where most of the odd behaviour
-lives. No account details, no personal data; the app has neither.
-
-Most useful if you **haven't** used the Animation Selection screen here yet — but
-any dump helps, and comparing several cubes tells us far more than one does.
+The export is read-only. It includes animation schedules, alarm names and
+messages, danmaku phrases, themes, the current face, the face catalogue and your
+timezone offset. Remove any names or messages you do not want to share publicly.
 
 ---
 
