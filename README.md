@@ -90,7 +90,7 @@ doesn't use, collect, or store your location.
 | **Face Studio** | Preview a face and choose 1–1000 plays, or 0 for unlimited; upload and crop your own image |
 | **Animation Selection** | Pick 1–5 animations for each time of day; repair missing schedule timing while keeping your selections |
 | **Wake Alarm** | Alarms with repeat days and a scrolling message. **Use next alarm from Clock** fills in the time from your phone's own next alarm |
-| **Danmaku** | Custom scrolling messages and reminders |
+| **Danmaku** | Custom scrolling messages and reminders; remove individual stored or preloaded messages |
 | **System Settings** | See your real firmware version, switch themes |
 
 Face images are built into the app, so browsing works offline. Internet is only
@@ -99,6 +99,12 @@ needed to **switch themes**, which downloads a firmware image.
 **Alarms and danmaku save as you edit.** In Face Studio, choose a count and tap
 **Confirm** to apply it. For scheduled animations, choose a slot, select its
 animations and tap **Save**.
+
+**New in v1.0.3:** open **Danmaku → Stored scrolling messages**, tap **Remove**
+beside a message, and confirm. You can remove custom and preloaded messages
+individually. The app keeps the remaining messages and their settings, and
+checks the saved list afterward. This update remains free, with no account,
+trial limit or in-app purchase.
 
 Opening Alarms, Animation Selection or System Settings reads that screen from
 the cube. A line at the top tells you whether you're looking at the cube's
