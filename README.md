@@ -8,6 +8,60 @@ Bluetooth.
 
 ### [⬇ Download the latest APK](../../releases/latest)
 
+## New: CUBEFACE Companion closed test
+
+I'm working on **Unofficial Cubeface Companion** after requests to support other
+Bilibili CUBEFACE cubes. This new app will be getting more features and updates.
+**The original free MikuCube APK is staying available—you can keep using it.**
+
+Companion supports face changes, photos, alarms, danmaku and schedules, with
+support for other compatible CUBEFACE models too. Miku is hardware-tested;
+testers with other models can help verify compatibility.
+
+I've also added modified Miku firmware with **English menus/text and a 12-hour
+clock with AM/PM**, which Companion can flash onto the cube. **These firmware
+updates are Miku-only.** Other models can use compatible companion features
+without flashing Miku firmware. These additions belong to the new Companion
+app; they are not included in the original APK linked above.
+
+### Help test it on Android
+
+Before public launch, I need real-world feedback on connections, features and
+anything confusing. Google requires at least **12 testers enrolled in the
+closed test continuously for 14 days** before I can apply for production access.
+Please stay enrolled for at least 14 days, try the app during that time and send
+feedback through [issues](../../issues) or to devvtiidev@gmail.com.
+
+**If you help test and provide feedback, I'll make sure you get the full unlock
+free when Companion goes into production.** The public app is planned to offer
+eight free successful changes shared across supported write actions, followed
+by an optional **US$3.99 one-time full unlock**, with no subscription.
+
+Use the **same Google account for both steps and your phone's Play Store**:
+
+1. **Join the tester group:**
+   https://groups.google.com/g/unofficial-cubeface-companion-testers
+2. **Join the closed test and install:**
+   https://play.google.com/apps/testing/com.innti.mikucube
+
+The second link becomes available after the closed release is approved and
+published. Joining the Google Group alone does not enroll you in the Play test.
+If you're already enrolled in the internal test, leave that test before joining
+the closed test so your participation counts toward the closed-testing period.
+
+To test Full Unlock, tap the purchase button and choose Google's **"Test card,
+always approves"** (or **"Test instrument, always approves"**) payment option.
+That simulates the purchase **without charging you**. If only your regular card
+appears, cancel and let me know. Test payment access uses membership in the
+tester group above; a test purchase itself is separate from the promised free
+production unlock.
+
+Actual cube features require compatible Bilibili CUBEFACE hardware. You can also
+explore the sample screens without a cube. Companion is an independent app,
+not affiliated with or endorsed by Bilibili or Crypton Future Media.
+
+---
+
 <p align="center">
   <img src="screenshots/03-face-studio.png" width="30%" alt="Face Studio — pick a face or upload your own" />
   <img src="screenshots/06-alarms.png"      width="30%" alt="Wake Alarm" />
